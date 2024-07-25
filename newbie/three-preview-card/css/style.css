@@ -1,0 +1,161 @@
+:root {
+  /* ==== Primary ==== */
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  /* ==== Neutral ==== */
+  --headings: hsl(0, 0%, 95%);
+  --paragraphs: hsla(0, 0%, 100%, 0.75);
+
+  /* ==== Font ==== */
+  --ff-bsd: 'Big Shoulders Display', sans-serif;
+  --ff-ld: 'Lexend Deca', sans-serif;
+
+  --fw-normal: 400;
+  --fw-bold: 700;
+}
+
+/* ================================================================= */
+/* ================================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--ff-ld);
+  font-size: 1rem;
+  font-weight: var(--ff-ld);
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--headings);
+}
+
+.columns {
+  margin-block: 10%;
+  max-width: 750px;
+  width: 88%;
+  display: grid;
+  grid-template-columns: 1fr;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+:is(.col, .col__content) {
+  display: flex;
+  flex-direction: column;
+}
+
+.col {
+  padding: 3.5rem;
+  row-gap: 1.2rem;
+}
+
+.col--sedan {
+  background-color: var(--bright-orange);
+}
+.col--suv {
+  background-color: var(--dark-cyan);
+}
+.col--luxury {
+  background-color: var(--very-dark-cyan);
+}
+
+
+.col__content {
+  row-gap: 1.5rem;
+}
+
+.col__content .col__title {
+  text-transform: uppercase;
+  color: var(--headings);
+  font-family: var(--ff-bsd);
+  font-size: 2.4rem;
+  font-weight: var(--fw-bold);
+}
+
+.col__content .col__lead {
+  padding-right: 3.5rem;
+  color: var(--paragraphs);
+  font-size: 1.2rem;
+  font-weight: var(--fw-normal);
+  line-height: 2.1;
+}
+
+.col__cta {
+  width: max-content;
+  background-color: var(--headings);
+  border: 1px solid var(--headings);
+  border-radius: 2.4rem;
+  padding: 1rem 1.8rem;
+  transition: background-color 0.4s, color 0.3s ease-in-out;
+}
+
+.col--sedan .col__cta {
+  color: var(--bright-orange);
+}
+
+.col--suv .col__cta {
+  color: var(--dark-cyan);
+}
+
+.col--luxury .col__cta {
+  color: var(--very-dark-cyan);
+}
+
+.col__cta:hover {
+  background-color: transparent;
+  color: var(--paragraphs);
+}
+
+@media screen and (min-width: 600px) {
+  .columns {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 998px) {
+  .columns {
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+  }
+
+  .col {
+    padding: 4rem;
+    padding-right: 4.7rem;
+    row-gap: 6.4rem;
+  }
+
+  .col__content {
+    row-gap: 2.4rem;
+  }
+
+  .col__content .col__title {
+    font-size: 3.2rem;
+  }
+
+  .col__content .col__lead {
+    padding-right: 0;
+  }
+
+  .col__cta {
+    font-size: 1.2rem;
+    padding: 1rem 2.8rem;
+  }
+}
