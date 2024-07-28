@@ -24,8 +24,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Click here]()
-- Live Site URL: [Click here]()
+- Solution URL: [Click here](https://www.frontendmentor.io/solutions/responsive-article-preview-component-J9YiA4WvY9)
+- Live Site URL: [Click here](https://thriving-dolphin-f0437c.netlify.app/)
 
 ## My process
 
