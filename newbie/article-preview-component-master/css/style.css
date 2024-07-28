@@ -36,16 +36,15 @@ article {
   margin-inline: auto;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 200px, 1fr;
+  grid-template-rows: 200px 1fr;
   border-radius: 12px;
   overflow: hidden;
 }
 
-.card-img{
-  height: 200px;
+.card-img {
   background-image: url('../images/drawers.jpg');
   background-size: cover;
-  background-position:  50% 25%;
+  background-position: 50% 25%;
 }
 
 .article-content {
@@ -96,15 +95,19 @@ article {
   color: var(--very-dark-grayish-blue);
   font-size: 12px;
   font-weight: bold;
+  letter-spacing: 0.6px;
 }
 
 .author-time {
   color: var(--grayish-blue);
   font-size: 12px;
   font-weight: 500;
+  letter-spacing: 0.84px;
 }
 
 .btn-share {
+  position: relative;
+  z-index: 1;
   background-color: var(--light-grayish-blue);
   width: 32px;
   height: 32px;
@@ -114,15 +117,11 @@ article {
   transition: background-color 0.4s ease;
 }
 
-.btn-share--close {
-  background-color: var(--desaturated-dark-blue);
-}
-
 .btn-share:hover {
   background-color: var(--hover);
 }
 
-.tooltip {
+.tooltip--mobile {
   background-color: var(--very-dark-grayish-blue);
   position: absolute;
   inset-inline: 0;
@@ -131,14 +130,14 @@ article {
   padding-inline: 2rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 12px;
   overflow: hidden;
   z-index: 0;
   transition: height 0.4s ease-in-out;
 }
 
-.tooltip.show {
-  height: 64px;
+.tooltip--mobile.show {
+  height: 75px;
 }
 
 .social-media {
@@ -147,10 +146,79 @@ article {
   gap: 12px;
 }
 
-.social-media h3{
+.social-media h3 {
   color: var(--grayish-blue);
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 5.52px;
   text-transform: uppercase;
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  right: -9.5%;
+  bottom: 32%;
+  width: 248px;
+  padding: 18px 35px;
+  background-color: var(--very-dark-grayish-blue);
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateY(50%);
+  transition: opacity 0.4s, transform 0.4s ease-in-out;
+}
+
+.tooltip::after {
+  position: absolute;
+  bottom: -10%;
+  left: 46%;
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-color: var(--very-dark-grayish-blue);
+  transform: rotate(45deg);
+}
+
+.tooltip.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media screen and (min-width: 768px) {
+  article {
+    max-width: 730px;
+    grid-template-columns: 285px 1fr;
+    grid-template-rows: 280px;
+    overflow: visible;
+  }
+
+  .card-img {
+    background-position: 5% 50%;
+  }
+  .article-content {
+    padding: 32px 40px;
+    gap: 10px;
+  }
+
+  .article-title {
+    font-size: 20px;
+    line-height: 29.4px;
+    letter-spacing: 0.2px;
+  }
+
+  .article-lead {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 20.28px;
+    letter-spacing: 0.13px;
+    margin-bottom: 10px;
+  }
+
+  .tooltip--mobile {
+    display: none;
+  }
+
+  .tooltip {
+    display: block;
+  }
 }

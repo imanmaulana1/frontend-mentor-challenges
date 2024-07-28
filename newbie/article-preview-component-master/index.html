@@ -26,11 +26,8 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <!--   Michelle Appleton 28 Jun 2020
-    Share -->
-
     <main>
-      <article class="article-card">
+      <article>
         <div class="card-img"></div>
         <section class="article-content">
           <h1 class="article-title">
@@ -59,19 +56,25 @@
               </div>
             </div>
             <button class="btn-share">
-              <img src="./images/icon-share.svg" alt="share icon" />
+              <img src="./images/icon-share.svg" alt="share icon" id="share" />
             </button>
           </footer>
           <div class="tooltip">
             <div class="social-media">
-              <h3>Share</h3>
+              <h3 class="tooltip-socialmedia">Share</h3>
               <img src="./images/icon-facebook.svg" alt="facebook icon" />
               <img src="./images/icon-twitter.svg" alt="twitter icon" />
               <img src="./images/icon-pinterest.svg" alt="pinterest icon" />
             </div>
-            <button class="btn-share btn-share--close">
-              <img src="./images/icon-share-2.svg" alt="share icon" />
-            </button>
+          </div>
+          <!-- Tooltip Mobile -->
+          <div class="tooltip--mobile">
+            <div class="social-media">
+              <h3 class="tooltip-socialmedia">Share</h3>
+              <img src="./images/icon-facebook.svg" alt="facebook icon" />
+              <img src="./images/icon-twitter.svg" alt="twitter icon" />
+              <img src="./images/icon-pinterest.svg" alt="pinterest icon" />
+            </div>
           </div>
         </section>
       </article>
