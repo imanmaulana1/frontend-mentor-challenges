@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Article preview component</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!--   Michelle Appleton 28 Jun 2020
+    Share -->
+
+    <main>
+      <article class="article-card">
+        <div class="card-img"></div>
+        <section class="article-content">
+          <h1 class="article-title">
+            Shift the overall look and feel by adding these wonderful touches to
+            furniture in your home
+          </h1>
+          <p class="article-lead">
+            Ever been in a room and felt like something was missing? Perhaps it
+            felt slightly bare and uninviting. I’ve got some simple tips to help
+            you make any room feel complete.
+          </p>
+          <footer class="article-footer">
+            <div class="article-author">
+              <img
+                src="./images/avatar-michelle.jpg"
+                alt="profile picture"
+                width="40"
+                height="40"
+                class="avatar"
+              />
+              <div class="author-wrapper">
+                <h2 class="author-name">Michelle Appleton</h2>
+                <time datetime="2020-06-28" class="author-time"
+                  >28 Jun 2020</time
+                >
+              </div>
+            </div>
+            <button class="btn-share">
+              <img src="./images/icon-share.svg" alt="share icon" />
+            </button>
+          </footer>
+          <div class="tooltip">
+            <div class="social-media">
+              <h3>Share</h3>
+              <img src="./images/icon-facebook.svg" alt="facebook icon" />
+              <img src="./images/icon-twitter.svg" alt="twitter icon" />
+              <img src="./images/icon-pinterest.svg" alt="pinterest icon" />
+            </div>
+            <button class="btn-share btn-share--close">
+              <img src="./images/icon-share-2.svg" alt="share icon" />
+            </button>
+          </div>
+        </section>
+      </article>
+    </main>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

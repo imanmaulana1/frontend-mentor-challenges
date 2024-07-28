@@ -1,0 +1,156 @@
+:root {
+  --very-dark-grayish-blue: #48556a;
+  --desaturated-dark-blue: #6d7f97;
+  --grayish-blue: #9eafc2;
+  --light-grayish-blue: #ecf2f8;
+
+  --hover: #cdd3da;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--light-grayish-blue);
+  display: grid;
+  place-items: center;
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+}
+
+article {
+  position: relative;
+  max-width: 327px;
+  background-color: #ffffff;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 200px, 1fr;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card-img{
+  height: 200px;
+  background-image: url('../images/drawers.jpg');
+  background-size: cover;
+  background-position:  50% 25%;
+}
+
+.article-content {
+  padding: 40px 32px 20px;
+  display: grid;
+  gap: 12px;
+}
+
+.article-title {
+  color: var(--very-dark-grayish-blue);
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 24px;
+  letter-spacing: 0.16px;
+}
+
+.article-lead {
+  color: var(--desaturated-dark-blue);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.48px;
+  margin-bottom: 12px;
+}
+
+.article-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.article-author {
+  display: flex;
+  gap: 16px;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+.author-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.author-name {
+  color: var(--very-dark-grayish-blue);
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.author-time {
+  color: var(--grayish-blue);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.btn-share {
+  background-color: var(--light-grayish-blue);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+
+.btn-share--close {
+  background-color: var(--desaturated-dark-blue);
+}
+
+.btn-share:hover {
+  background-color: var(--hover);
+}
+
+.tooltip {
+  background-color: var(--very-dark-grayish-blue);
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  height: 0px;
+  padding-inline: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  z-index: 0;
+  transition: height 0.4s ease-in-out;
+}
+
+.tooltip.show {
+  height: 64px;
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.social-media h3{
+  color: var(--grayish-blue);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 5.52px;
+  text-transform: uppercase;
+}
