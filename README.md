@@ -17,17 +17,8 @@ Frontend Mentor offers a wide range of challenges to help you improve your front
 
 Here are some of the challenges included in this repository:
 
-### Newbie
-- [Blog Preview Card](https://github.com/imanmaulana1/frontend-mentor-challenges/tree/main/newbie/blog-preview-card)
-- [FAQ Accordion](https://github.com/imanmaulana1/frontend-mentor-challenges/tree/main/newbie/faq-accordion)
-- [NFT Preview](https://github.com/imanmaulana1/frontend-mentor-challenges/tree/main/newbie/nft-preview)
-- [Order Summary](https://github.com/imanmaulana1/frontend-mentor-challenges/tree/main/newbie/order-summary)
-- [Product Preview Card](https://github.com/imanmaulana1/frontend-mentor-challenges/tree/main/newbie/product-preview-card)
-- [Profile Card](https://github.com/imanmaulana1/frontend-mentor-challenges/tree/main/newbie/profile-card)
-- [Profile Links](https://github.com/imanmaulana1/frontend-mentor-challenges/tree/main/newbie/profile-links)
-- [QR Component](https://github.com/imanmaulana1/frontend-mentor-challenges/tree/main/newbie/qr-component)
-- [Stats Preview Card](https://github.com/imanmaulana1/frontend-mentor-challenges/tree/main/newbie/stats-preview-card)
-- [Three Preview Card](https://github.com/imanmaulana1/frontend-mentor-challenges/tree/main/newbie/three-preview-card)
+### Difficulty
+- [Newbie](https://github.com/imanmaulana1/frontend-mentor-challenges/tree/main/newbie)
 
 Each challenge is contained in its own folder and includes all the necessary files to run and view the project.
 
