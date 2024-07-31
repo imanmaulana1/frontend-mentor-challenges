@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Ping coming soon page</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="logo">
+        <img src="./images/logo.svg" alt="Logo Ping" class="image" />
+      </div>
+      <h1><span>We are launching</span> soon!</h1>
+      <p class="lead">Subscribe and get notified</p>
+      <form id="form-wrapper" novalidate>
+        <div class="form-control">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Your email address..."
+          />
+          <button type="submit">Notify Me</button>
+        </div>
+        <p class="text-error"></p>
+      </form>
+      <div class="image-wrapper">
+        <img
+          src="./images/illustration-dashboard.png"
+          alt="Dashboard illustration"
+        />
+      </div>
+    </main>
+    <footer class="container">
+      <div class="icon-group">
+        <div class="icon">
+          <i class="fa-brands fa-facebook-f"></i>
+        </div>
+        <div class="icon">
+          <i class="fa-brands fa-twitter"></i>
+        </div>
+        <div class="icon">
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+      </div>
+      <p class="copyright">&copy; Copyright Ping. All rights reserved.</p>
+    </footer>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,262 @@
+:root {
+  --blue: #4f7df3;
+  --pale-blue: #c2d3ff;
+  --light-red: #ff5263;
+  --gray: #969696;
+  --very-dark-blue: #151f29;
+
+  --ff-libre: 'Libre Franklin', sans-serif;
+
+  --fw-300: 300;
+  --fw-600: 600;
+  --fw-700: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 20px;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  font-family: var(--ff-libre);
+  font-size: 1rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 121px;
+}
+
+.container {
+  width: 100%;
+  padding-inline: 0.6rem;
+}
+
+.logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 85px;
+}
+
+.image {
+  display: block;
+  width: 49px;
+  height: 15px;
+}
+
+main h1 {
+  color: var(--very-dark-blue);
+  font-size: 1.1rem;
+  font-weight: var(--fw-700);
+  text-align: center;
+  margin-top: 39px;
+}
+
+main h1 span {
+  color: var(--gray);
+  font-weight: var(--fw-300);
+}
+
+main .lead {
+  color: var(--very-dark-blue);
+  font-size: 0.6rem;
+  text-align: center;
+  margin-top: 17px;
+}
+
+#form-wrapper {
+  max-width: 281px;
+  width: 100%;
+  margin-inline: auto;
+  margin-top: 32px;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+#form-wrapper input {
+  padding: 12px 0 13px 32px;
+  outline: none;
+  border: 1px solid #cfd2e3;
+  border-radius: 33px;
+  color: var(--gray);
+  font-family: 'Libre Franklin';
+  font-size: 0.6rem;
+}
+
+#form-wrapper input:focus {
+  border: 1px solid var(--pale-blue);
+}
+
+#form-wrapper input.error {
+  border: 1px solid var(--light-red);
+}
+
+#form-wrapper button {
+  padding-block: 12px 13px;
+  background-color: var(--blue);
+  border: none;
+  border-radius: 33px;
+  color: #ffffff;
+  font-size: 0.6rem;
+  font-weight: var(--fw-600);
+  cursor: pointer;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+#form-wrapper button:hover {
+  background-color: var(--pale-blue);
+}
+
+.text-error {
+  text-align: start;
+  margin-left: 20px;
+  margin-top: 10px;
+  color: var(--light-red);
+  font-size: 0.6rem;
+  font-style: italic;
+  letter-spacing: 0.12px;
+}
+
+.image-wrapper {
+  max-width: 281px;
+  width: 100%;
+  margin-top: 68px;
+  margin-inline: auto;
+}
+
+.image-wrapper img {
+  width: 100%;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 27px;
+  padding-bottom: 37px;
+}
+
+.icon-group {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.icon {
+  width: 31px;
+  height: 31px;
+  display: grid;
+  place-items: center;
+  background-color: #ffffff;
+  border: 1px solid var(--pale-blue);
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.icon:hover {
+  background-color: var(--blue);
+}
+
+.icon i {
+  color: var(--blue);
+  font-size: 0.8rem;
+}
+
+.icon:hover i {
+  color: #ffffff;
+}
+
+.copyright {
+  color: var(--gray);
+  font-size: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    gap: 73px;
+  }
+
+  .container {
+    max-width: 710px;
+    margin-inline: auto;
+  }
+
+  .logo {
+    padding-top: 86px;
+  }
+
+  .image {
+    width: 86px;
+    height: 26px;
+  }
+
+  main h1 {
+    font-size: 2.4rem;
+    margin-top: 48px;
+  }
+
+  main p {
+    font-size: 1rem;
+  }
+
+  #form-wrapper {
+    max-width: 637px;
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .form-control {
+    flex-direction: row;
+    column-gap: 16px;
+  }
+
+  #form-wrapper input {
+    width: 421px;
+    padding: 20px 30px 18px 30px;
+    font-size: 0.75rem;
+    letter-spacing: 0.6px;
+  }
+
+  #form-wrapper button {
+    padding: 19px 62px;
+    font-size: 0.75rem;
+    letter-spacing: 0.6px;
+  }
+
+  #form-wrapper button:hover {
+    background-color: var(--pale-blue);
+  }
+
+  .text-error {
+    margin-left: 33px;
+    margin-top: 8px;
+  }
+
+  .image-wrapper {
+    max-width: 637px;
+    width: 100%;
+    margin-top: 63px;
+    margin-inline: auto;
+  }
+
+  footer {
+    row-gap: 25px;
+    padding-bottom: 49px;
+  }
+
+  .copyright {
+    font-size: 0.6rem;
+  }
+}
