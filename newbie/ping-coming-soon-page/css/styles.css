@@ -222,15 +222,17 @@ footer {
     column-gap: 16px;
   }
 
-  #form-wrapper input {
+  #form-wrapper .form-control input {
     width: 421px;
-    padding: 18px 30px;
+    height: 52px;
+    padding: 0 30px;
     font-size: 0.75rem;
     letter-spacing: 0.6px;
   }
 
-  #form-wrapper button {
-    padding: 19px 62px;
+  #form-wrapper .form-control button {
+    height: 52px;
+    flex: 1;
     font-size: 0.75rem;
     letter-spacing: 0.6px;
   }
