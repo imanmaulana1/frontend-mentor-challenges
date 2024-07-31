@@ -65,7 +65,7 @@ main h1 span {
 }
 
 main .lead {
-  color: var(--very-dark-blue);
+  color: var(--gray);
   font-size: 0.6rem;
   text-align: center;
   margin-top: 17px;
