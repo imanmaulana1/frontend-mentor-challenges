@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Click here](https://www.frontendmentor.io/solutions/ping-coming-soon-using-vanilla-css-and-javascript-z0RiOAcs5R)
+- Live Site URL: [Click here](https://symphonious-quokka-b0002b.netlify.app/)
 
 ## My process
 

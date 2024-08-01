@@ -14,8 +14,8 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 
 ## Links
 
-- Live site URL: [Click here]()
-- Solution URL: [Click here]()
+- Live site URL: [Click here](https://deft-hummingbird-c9a601.netlify.app/)
+- Solution URL: [Click here](https://www.frontendmentor.io/solutions/responsive-component-all-device-tWyTrJ4ibm)
 
 ## My process
 
