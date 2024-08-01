@@ -25,8 +25,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Click here](https://www.frontendmentor.io/solutions/responsive-page-using-grid-vCnF1RidbA)
+- Live Site URL: [Click here](https://verdant-stroopwafel-2e5a18.netlify.app/)
 
 ## My process
 
