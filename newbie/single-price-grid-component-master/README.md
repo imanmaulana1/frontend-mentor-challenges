@@ -22,8 +22,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Click here](https://www.frontendmentor.io/solutions/responsive-component-using-css-grid-INwn4rC_yO)
+- Live Site URL: [Click here](https://statuesque-klepon-fb5673.netlify.app/)
 
 ## My process
 
