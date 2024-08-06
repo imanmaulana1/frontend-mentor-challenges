@@ -308,30 +308,89 @@ section:nth-child(2) .image {
   max-width: 325px;
 }
 
+.testimonials {
+  padding-block: 156px;
+  background-color: #fffbf8;
+}
+
+.testimonials h2 {
+  color: var(--dark-grayish-blue);
+  font-family: Fraunces;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 6.48px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 29px;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  align-items: center;
+}
+
+.card-img {
+  width: 71px;
+  height: 71px;
+  border-radius: 50%;
+}
+
+.card-testimonials {
+  margin-bottom: 10px;
+}
+
+.card-testimonial p {
+  color: var(--very-dark-grayish-blue);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+.card-user cite {
+  display: block;
+  color: var(--very-dark-desaturated-blue);
+  font-family: Fraunces;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.card-user p {
+  color: var(--dark-grayish-blue);
+  font-size: 0.722rem;
+  font-weight: 500;
+  line-height: 32px;
+}
+
 .banner {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
 
-.banner-img {
-  width: 100%;
-  height: 100%;
-}
-
 /* Styles for Footer  */
-footer {
+#footer {
   background-color: var(--light-cyan);
   padding-block: 3.944rem;
 }
 
-footer .container,
-footer .nav-links-footer,
-footer .social-icons {
+#footer .container,
+#footer .nav-links-footer,
+#footer .social-icons {
   display: flex;
   align-items: center;
 }
 
-footer .container {
+#footer .container {
   flex-direction: column;
 }
 
@@ -355,7 +414,7 @@ footer .container {
   color: var(--white);
 }
 
-footer .social-icons {
+#footer .social-icons {
   gap: 1.5rem;
   margin-top: 4.778rem;
 }
@@ -474,6 +533,19 @@ footer .social-icons {
     padding-block: 0;
   }
 
+  .card-wrapper {
+    grid-template-columns: 1fr;
+    gap: 42px;
+    margin-top: 46px;
+  }
+
+  .card {
+    gap: 23px;
+    max-width: 450px;
+    margin-inline: auto;
+  }
+
+
   .banner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -488,7 +560,7 @@ footer .social-icons {
     gap: 2.5rem;
   }
 
-  footer .social-icons {
+  #footer .social-icons {
     gap: 1.222rem;
     margin-top: 3.889rem;
   }
@@ -623,6 +695,49 @@ footer .social-icons {
     padding-block: 0;
   }
 
+  .testimonials {
+    padding-block: 46px;
+  }
+
+  .testimonials h2 {
+    font-size: 0.667rem;
+    letter-spacing: 3.84px;
+  }
+
+  .card-wrapper {
+    grid-template-columns: 1fr;
+    gap: 42px;
+    margin-top: 46px;
+  }
+
+  .card {
+    gap: 23px;
+    max-width: 250px;
+    margin-inline: auto;
+  }
+
+  .card-img {
+    width: 56px;
+    height: 56px;
+  }
+
+  .card-testimonials {
+    margin-bottom: 0;
+  }
+
+  .card-testimonial p {
+    font-size: 0.778rem;
+    line-height: 25px;
+  }
+
+  .card-user cite {
+    font-size: 0.833rem;
+  }
+
+  .card-user p {
+    font-size: 0.611rem;
+  }
+
   .banner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -637,7 +752,7 @@ footer .social-icons {
     gap: 2.5rem;
   }
 
-  footer .social-icons {
+  #footer .social-icons {
     gap: 1.222rem;
     margin-top: 3.889rem;
   }
