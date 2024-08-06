@@ -71,6 +71,7 @@ nav,
 nav {
   padding-block: 33px;
   justify-content: space-between;
+  position: relative;
 }
 
 .nav-links {
@@ -198,7 +199,7 @@ footer .social-icons {
 }
 
 .social-icon {
-  color: var(--dark-desaturated-cyan); 
+  color: var(--dark-desaturated-cyan);
   transition: color 0.3s ease;
 }
 
@@ -221,6 +222,51 @@ footer .social-icons {
   }
 
   nav .nav-links {
+    max-width: 329px;
+    width: 100%;
+    padding-block: 2.222rem;
+    flex-direction: column;
+    gap: 1.778rem;
+    position: absolute;
+    top: 4rem;
+    right: 0;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    background-color: var(--white);
+    transition: all 0.3s ease-in-out;
+  }
+
+  nav .nav-links.show {
+    top: 6rem;
+    opacity: 1;
+    visibility: initial;
+  }
+
+  nav .nav-links::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -1.333rem;
+    width: 0;
+    height: 0;
+    border-left: 24px solid transparent;
+    border-bottom: 24px solid var(--white);
+  }
+
+  .nav-links li a {
+    color: var(--dark-moderate-cyan);
+    font-size: 1.111rem;
+  }
+
+  .nav-links li .nav-cta {
+    background-color: var(--yellow);
+    font-size: 0.889rem;
+    padding: 16px 22px;
+  }
+
+  .nav-links li .nav-item::after {
+    content: none;
     display: none;
   }
 
@@ -254,6 +300,50 @@ footer .social-icons {
   }
 
   nav .nav-links {
+    width: 100%;
+    padding-block: 2.222rem;
+    flex-direction: column;
+    gap: 1.778rem;
+    position: absolute;
+    top: 4rem;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 10;
+    background-color: var(--white);
+    transition: all 0.4s ease-in-out;
+  }
+
+  nav .nav-links::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -1.333rem;
+    width: 0;
+    height: 0;
+    border-left: 24px solid transparent;
+    border-bottom: 24px solid var(--white);
+  }
+
+  nav .nav-links.show {
+    top: 6rem;
+    opacity: 1;
+    visibility: initial;
+  }
+
+  .nav-links li a {
+    color: var(--dark-moderate-cyan);
+    font-size: 1.111rem;
+  }
+
+  .nav-links li .nav-cta {
+    background-color: var(--yellow);
+    font-size: 0.889rem;
+    padding: 18px 22px;
+  }
+
+  .nav-links li .nav-item::after {
+    content: none;
     display: none;
   }
 
