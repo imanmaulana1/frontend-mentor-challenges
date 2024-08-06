@@ -1,20 +1,22 @@
 :root {
-  --soft-red: #fe7867;
-  --yellow: #fad400;
-  --dark-desaturated-cyan: #25564b; /* graphic text */
-  --dark-blue: #19536b; /* photography text */
-  --dark-moderate-cyan: #458c7e; /* footer text*/
-  --light-cyan: #90d4c5;
+  --soft-red: hsl(7, 99%, 70%);
+  --yellow: hsl(51, 100%, 49%);
+  --dark-desaturated-cyan: hsl(167, 40%, 24%); /* graphic text */
+  --dark-blue: hsl(198, 62%, 26%); /* photography text */
+  --dark-moderate-cyan: hsl(168, 34%, 41%); /* footer text*/
+  --light-cyan: hsl(167, 44%, 70%);
 
-  --hover: #6fcfff;
-  --hover-red: #ffa99e;
-  --hover-yellow: #fded91;
+  --hover: hsl(200, 100%, 72%);
+  --hover-red: hsl(7, 100%, 81%);
+  --hover-yellow: hsl(51, 96%, 78%);
 
-  --very-dark-desaturated-blue: #23303e;
-  --very-dark-grayish-blue: #5a636c;
-  --dark-grayish-blue: #818498;
-  --grayish-blue: #a7abae;
-  --white: #ffffff;
+  --very-dark-desaturated-blue: hsl(211, 28%, 19%);
+  --very-dark-grayish-blue: hsl(210, 9%, 39%);
+  --dark-grayish-blue: hsl(232, 10%, 55%);
+  --grayish-blue: hsl(206, 4%, 67%);
+  --white: hsl(0, 0%, 100%);
+
+  --white-50: hsl(26, 100%, 99%);
 
   --ff-barlow: 'Barlow', sans-serif;
   --ff-fraunces: 'Fraunces', serif;
@@ -32,6 +34,7 @@ html {
 }
 
 body {
+  background-color: var(--white-50);
   min-height: 100vh;
   font-family: var(--ff-barlow);
   font-size: 1rem;
@@ -310,7 +313,7 @@ section:nth-child(2) .image {
 
 .testimonials {
   padding-block: 156px;
-  background-color: #fffbf8;
+  background-color: hsl(26, 100%, 99%);
 }
 
 .testimonials h2 {
@@ -544,7 +547,6 @@ section:nth-child(2) .image {
     max-width: 450px;
     margin-inline: auto;
   }
-
 
   .banner {
     display: grid;
