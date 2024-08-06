@@ -3,7 +3,9 @@
   --yellow: #fad400;
   --dark-desaturated-cyan: #25564b; /* graphic text */
   --dark-blue: #19536b; /* photography text */
-  --dark-moderate-cyan: #458c7e; /* footer */
+  --dark-moderate-cyan: #458c7e; /* footer text*/
+  --light-cyan: #90d4c5;
+
   --hover: #6fcfff;
 
   --very-dark-desaturated-blue: #23303e;
@@ -48,15 +50,16 @@ button {
   font-family: inherit;
 }
 
-header {
-  height: 85vh;
-  background: url(../images/desktop/image-header.jpg) no-repeat center/cover;
-}
-
 .container {
   max-width: 1240px;
   width: 100%;
   margin-inline: auto;
+}
+
+/* Styles for Header */
+header {
+  height: 85vh;
+  background: url(../images/desktop/image-header.jpg) no-repeat center/cover;
 }
 
 nav,
@@ -152,6 +155,53 @@ nav .hamburger {
   }
 }
 
+/* Styles for Footer  */
+footer {
+  background-color: var(--light-cyan);
+  padding-block: 3.944rem;
+}
+
+footer .container,
+footer .nav-links-footer,
+footer .social-icons {
+  display: flex;
+  align-items: center;
+}
+
+footer .container {
+  flex-direction: column;
+}
+
+[aria-label='Footer navigation'] {
+  margin-top: 2.333rem;
+}
+
+.nav-links-footer {
+  gap: 3.222rem;
+}
+
+.nav-links-footer a {
+  color: var(--dark-moderate-cyan);
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links-footer li:hover a,
+.social-icon:hover {
+  color: var(--white);
+}
+
+footer .social-icons {
+  gap: 1.5rem;
+  margin-top: 4.778rem;
+}
+
+.social-icon {
+  color: var(--dark-desaturated-cyan); 
+  transition: color 0.3s ease;
+}
+
 /* Styles for screens up to 1024px */
 @media screen and (max-width: 1024px) {
   .container {
@@ -175,8 +225,21 @@ nav .hamburger {
   }
 
   .hero-title {
-    max-width: 720px;
+    max-width: 675px;
     margin-inline: auto;
+  }
+
+  [aria-label='Footer navigation'] {
+    margin-top: 1.778rem;
+  }
+
+  .nav-links-footer {
+    gap: 2.5rem;
+  }
+
+  footer .social-icons {
+    gap: 1.222rem;
+    margin-top: 3.889rem;
   }
 }
 
@@ -203,6 +266,19 @@ nav .hamburger {
 
   .arrow {
     margin-top: 2.333rem;
+  }
+
+  [aria-label='Footer navigation'] {
+    margin-top: 1.778rem;
+  }
+
+  .nav-links-footer {
+    gap: 2.5rem;
+  }
+
+  footer .social-icons {
+    gap: 1.222rem;
+    margin-top: 3.889rem;
   }
 }
 
