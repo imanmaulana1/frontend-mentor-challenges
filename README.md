@@ -19,6 +19,7 @@ Here are some of the challenges included in this repository:
 
 ### Difficulty
 - [Newbie](https://github.com/imanmaulana1/frontend-mentor-challenges/tree/main/newbie)
+- [Junior](https://github.com/imanmaulana1/frontend-mentor-challenges/tree/main/junior)
 
 Each challenge is contained in its own folder and includes all the necessary files to run and view the project.
 
@@ -32,7 +33,7 @@ To view or run any of the projects locally, follow these steps:
     ```
 2. Navigate to the specific challenge folder:
     ```sh
-    cd frontend-mentor-solutions/[challenge]
+    cd frontend-mentor-solutions/[difficulty]/[challenge]
     ```
 3. Open the `index.html` file in your preferred browser.
 
