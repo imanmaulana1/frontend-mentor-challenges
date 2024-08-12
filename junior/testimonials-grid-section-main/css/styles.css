@@ -4,7 +4,7 @@
   --very-dark-blackish-blue: #19212e;
   --white: #ffffff;
 
-  --light-grayish-blue: hsl(210, 46%, 95%);
+  --light-grayish-blue: #ecf2f8;
   --light-gray: hsl(0, 0%, 81%);
 
   --paragraph-text: hsla(0, 0%, 76%, 0.8);
@@ -26,6 +26,7 @@ body {
   justify-content: center;
   align-items: center;
   font-family: var(--ff-barlow);
+  background-color: var(--light-grayish-blue);
 }
 
 main {
@@ -155,7 +156,6 @@ section {
     column-gap: 30px;
     row-gap: 24px;
     margin-block: 0;
-    height: 600px;
   }
 
   .card.violet {
