@@ -9,12 +9,12 @@
 }
 
 :root {
-  --soft-orange: #e9ab53;
-  --soft-red: #f15e50;
-  --off-white: #fffdfa;
-  --grayish-blue: #c5c6ce;
-  --dark-grayish-blue: #5d5f79;
-  --very-dark-blue: #00001a;
+  --soft-orange: hsl(35, 77%, 62%);
+  --soft-red: hsl(5, 85%, 63%);
+  --off-white: hsl(36, 100%, 99%);
+  --grayish-blue: hsl(233, 8%, 79%);
+  --dark-grayish-blue: hsl(236, 13%, 42%);
+  --very-dark-blue: hsl(240, 100%, 5%);
 
   --ff-inter: 'Inter', sans-serif;
   --fw-regular: 400;
@@ -63,8 +63,18 @@ button {
   margin-inline: auto;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 30px;
+}
+
 header {
   padding-top: 89px;
+}
+
+main {
+  margin-top: 55px;
 }
 
 /* Styling for Navigation */
@@ -106,7 +116,8 @@ nav {
 }
 
 .hero-content {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: 30px;
 }
@@ -118,11 +129,16 @@ nav {
   line-height: 56px;
 }
 
+.hero-body {
+  margin-top: 30px;
+}
+
 .hero-lead {
   color: var(--dark-grayish-blue);
   font-size: 0.938rem;
   font-weight: var(--fw-regular);
   line-height: 26px;
+  margin-bottom: 41px;
 }
 
 .hero-btn {
@@ -153,6 +169,13 @@ aside {
   font-size: 2.5rem;
   font-weight: var(--fw-bold);
   line-height: 26px;
+  margin-bottom: 40px;
+}
+
+.aside-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .aside-subtitle {
@@ -161,6 +184,12 @@ aside {
   font-weight: var(--fw-bold);
   line-height: 26px;
   letter-spacing: 0.1px;
+  margin-bottom: 7px;
+  transition: color 0.3s ease-out;
+}
+
+.aside-subtitle:hover {
+  color: var(--soft-orange);
 }
 
 .aside-text {
@@ -170,9 +199,67 @@ aside {
   line-height: 26px;
 }
 
+/* Styling for Article section */
+#articles {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-top: 72px;
+  padding-bottom: 130px;
+}
+
+article {
+  display: flex;
+  align-items: start;
+  gap: 24px;
+}
+
+article .article-img {
+  flex: 1;
+}
+
+article .article-content {
+  width: 215px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+article .article-content span {
+  color: var(--soft-red);
+  font-size: 2rem;
+  font-weight: var(--fw-bold);
+}
+
+article .article-content .article-title {
+  color: var(--very-dark-blue);
+  font-size: 1.125rem;
+  font-weight: var(--fw-bold);
+  transition: color 0.3s ease;
+}
+
+article .article-content .article-title:hover {
+  color: var(--soft-red);
+}
+
+article .article-content .article-lead {
+  color: var(--dark-grayish-blue);
+  font-size: 0.938rem;
+  font-weight: var(--fw-regular);
+  line-height: 26px;
+}
+
 @media screen and (max-width: 1199px) {
   .container {
     max-width: 920px;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr 300px;
+  }
+
+  .hero-title {
+    font-size: 43px;
   }
 }
 
@@ -251,6 +338,61 @@ aside {
     top: 27px;
     right: 20px;
   }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+    line-height: 56px;
+  }
+
+  .hero-body {
+    margin-top: 0;
+  }
+
+  .hero-lead {
+    width: 90%;
+    margin-bottom: 24px;
+  }
+
+  aside {
+    margin-top: 64px;
+  }
+
+  #articles {
+    flex-direction: column;
+    margin-top: 64px;
+    padding-bottom: 80px;
+    gap: 29px;
+  }
+
+  article {
+    width: 100%;
+  }
+
+  article .article-img {
+    max-width: 100px;
+    height: 127px;
+  }
+
+  article .article-img img {
+    width: 100px;
+    height: 127px;
+  }
+
+  article .article-content {
+    flex: 1;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
@@ -317,6 +459,65 @@ aside {
     position: absolute;
     top: 27px;
     right: 20px;
+  }
+
+  .grid-container {
+    max-width: 600px;
+    margin-inline: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+    line-height: 56px;
+  }
+
+  .hero-body {
+    margin-top: 0;
+  }
+
+  .hero-lead {
+    width: 90%;
+    margin-bottom: 24px;
+  }
+
+  aside {
+    margin-top: 64px;
+  }
+
+  #articles {
+    flex-direction: column;
+    max-width: 600px;
+    margin-inline: auto;
+    margin-top: 64px;
+    padding-bottom: 80px;
+    gap: 29px;
+  }
+
+  article {
+    width: 100%;
+  }
+
+  article .article-img {
+    max-width: 100px;
+    height: 127px;
+  }
+
+  article .article-img img {
+    width: 100px;
+    height: 127px;
+  }
+
+  article .article-content {
+    flex: 1;
   }
 }
 
