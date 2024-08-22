@@ -18,7 +18,7 @@ const getMap = (lat, lng, city, region, country, postalCode) => {
   }).addTo(map);
 
   const customIcon = L.icon({
-    iconUrl: './public/images/icon-location.svg',
+    iconUrl: './images/icon-location.svg',
     iconAnchor: [16, 32],
     popupAnchor: [8, -32],
   });
