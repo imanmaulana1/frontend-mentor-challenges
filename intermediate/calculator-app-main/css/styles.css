@@ -123,7 +123,6 @@ button {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 13px;
-  row-gap: 13px;
   background-color: var(--bg-keypad);
   border-radius: 10px;
 }
@@ -139,15 +138,14 @@ button {
   background-color: var(--bg-key-1);
   border-bottom: 5px solid var(--key-shadow-1);
   border-radius: 10px;
-  transition: background-color 0.3s ease-in-out, top 0.4s ease;
-  position: relative;
+  transition: background-color 0.3s ease-in-out;
 
   &:hover {
     background-color: var(--hover-1);
   }
 
   &:active {
-    top: 3px;
+    transform: translateY(3px);
   }
 }
 
@@ -177,4 +175,25 @@ button {
 .key.reset,
 .key.equal {
   grid-column: span 2;
+}
+
+@media screen and (min-width: 590px) {
+  .container {
+    max-width: 588px;
+  }
+
+  .keypad-wrapper {
+    padding: 2rem;
+    gap: 24px;
+  }
+
+  .key {
+    font-size: 2.5rem;
+  }
+
+  .key.del,
+  .key.reset,
+  .key.equal {
+    font-size: 28px;
+  }
 }
