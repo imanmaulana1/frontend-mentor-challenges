@@ -29,6 +29,11 @@
 
   --text-1: hsl(221, 14%, 31%);
   --text-2: hsl(0, 0%, 100%);
+  --text-calculator: hsl(221, 14%, 31%);
+  --text-delete: hsl(0, 0%, 100%);
+  --text-equal: hsl(0, 0%, 100%);
+  --text-title: hsl(0, 0%, 100%);
+  --text-result: hsl(0, 0%, 100%);
 
   /* #### Typography */
   --ff-league-spartan: 'League Spartan', sans-serif;
@@ -66,6 +71,13 @@ button {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 32px;
+  position: relative;
+}
+
+.theme-wrapper h1,
+.switch-wrapper span,
+.number-wrapper .label-slider {
+  color: var(--text-title);
 }
 
 .theme-switch {
@@ -74,13 +86,17 @@ button {
 }
 
 .number-wrapper {
-  padding-right: 4px;
   position: absolute;
+  right: 0;
   top: -1rem;
-  width: 100%;
+  width: 70px;
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+
+.label-slider {
+  cursor: pointer;
 }
 
 .switch-wrapper {
@@ -102,10 +118,28 @@ button {
   height: 18px;
   background-color: var(--bg-toggle);
   border-radius: 50%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.ball.no-transition {
+  transition: none;
+}
+
+.ball.theme-2 {
+  transform: translateX(23px);
+}
+
+.ball.theme-3 {
+  transform: translateX(46px);
+}
+
+.switch:hover .ball {
+  background-color: var(--hover-3);
 }
 
 .screen {
-  padding: 1.5rem;
+  height: 88px;
+  padding: 25px 24px 26px;
   margin-bottom: 1.5rem;
   background-color: var(--bg-screen);
   border-radius: 8px;
@@ -116,6 +150,7 @@ button {
   font-size: 2.5rem;
   font-weight: 700;
   letter-spacing: -0.8px;
+  color: var(--text-result);
 }
 
 .keypad-wrapper {
@@ -134,7 +169,7 @@ button {
   align-items: center;
   font-size: 2rem;
   font-weight: 700;
-  color: var(--text-1);
+  color: var(--text-calculator);
   background-color: var(--bg-key-1);
   border-bottom: 5px solid var(--key-shadow-1);
   border-radius: 10px;
@@ -152,7 +187,7 @@ button {
 .key.del,
 .key.reset {
   font-size: 20px;
-  color: var(--text-2);
+  color: var(--text-delete);
   background-color: var(--bg-key-2);
   border-bottom: 5px solid var(--key-shadow-2);
 
@@ -163,7 +198,7 @@ button {
 
 .key.equal {
   font-size: 20px;
-  color: var(--text-2);
+  color: var(--text-equal);
   background-color: var(--bg-key-3);
   border-bottom: 5px solid var(--key-shadow-3);
 
@@ -180,6 +215,15 @@ button {
 @media screen and (min-width: 590px) {
   .container {
     max-width: 588px;
+  }
+
+  .screen {
+    padding: 40px 40px 37px;
+    height: 128px;
+  }
+
+  .result {
+    font-size: 3.5rem;
   }
 
   .keypad-wrapper {

@@ -31,41 +31,42 @@
         <h1>calc</h1>
         <div class="theme-switch">
           <div class="switch-wrapper">
-            <span>Theme</span>
-            <div class="switch">
-              <div class="number-wrapper">
-                <span>1</span>
-                <span>2</span>
-                <span>3</span>
-              </div>
+            <span>THEME</span>
+            <button class="switch" data-current-state="1">
               <div class="ball"></div>
-            </div>
+            </button>
+          </div>
+          <div class="number-wrapper">
+            <span class="label-slider" data-state="1">1</span>
+            <span class="label-slider" data-state="2">2</span>
+            <span class="label-slider" data-state="3">3</span>
           </div>
         </div>
       </div>
       <div class="screen">
-        <span class="result">399,981</span>
+        <span class="result">399</span>
       </div>
       <div class="keypad-wrapper">
-        <button class="key">7</button>
-        <button class="key">8</button>
-        <button class="key">9</button>
-        <button class="key del">DEL</button>
-        <button class="key">4</button>
-        <button class="key">5</button>
-        <button class="key">6</button>
-        <button class="key">+</button>
-        <button class="key">1</button>
-        <button class="key">2</button>
-        <button class="key">3</button>
-        <button class="key">-</button>
-        <button class="key">.</button>
-        <button class="key">0</button>
-        <button class="key">/</button>
-        <button class="key">x</button>
-        <button class="key reset">RESET</button>
-        <button class="key equal">=</button>
+        <button class="key" data-value="7">7</button>
+        <button class="key" data-value="8">8</button>
+        <button class="key" data-value="9">9</button>
+        <button class="key del" data-action="delete">DEL</button>
+        <button class="key" data-value="4">4</button>
+        <button class="key" data-value="5">5</button>
+        <button class="key" data-value="6">6</button>
+        <button class="key" data-operand="+">+</button>
+        <button class="key" data-value="1">1</button>
+        <button class="key" data-value="2">2</button>
+        <button class="key" data-value="3">3</button>
+        <button class="key" data-operand="-">-</button>
+        <button class="key" data-action="decimal">.</button>
+        <button class="key" data-value="0">0</button>
+        <button class="key" data-operand="/">/</button>
+        <button class="key" data-operand="x">x</button>
+        <button class="key reset" data-action="reset">RESET</button>
+        <button class="key equal" data-action="equal">=</button>
       </div>
     </main>
+    <script type="module" src="./js/main.js" async></script>
   </body>
 </html>
