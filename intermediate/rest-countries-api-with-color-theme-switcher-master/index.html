@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/home.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <a href="#" class="nav-brand">Where in the world?</a>
+          <button class="nav-darkmode">
+            <i class="fa-regular fa-moon"></i>
+            <span>Dark mode</span>
+          </button>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <section class="filter">
+          <div class="search-wrapper">
+            <form class="input-wrapper">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <label for="search" class="sr-only">Search</label>
+              <input
+                type="text"
+                name="search"
+                id="search"
+                placeholder="Search for a country..."
+              />
+            </form>
+          </div>
+          <div class="select-wrapper">
+            <select name="region" id="region">
+              <option>Filter by Region</option>
+              <option value="">Africa</option>
+              <option value="">America</option>
+              <option value="">Asia</option>
+              <option value="">Europe</option>
+              <option value="">Oceania</option>
+            </select>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
