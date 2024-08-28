@@ -39,9 +39,22 @@ $(document).ready(function () {
         const cardHTML = cards.join('');
 
         $('.countries-wrapper').html(cardHTML);
+
+        gsap.utils.toArray('.card').forEach((card) => {
+          gsap.from(card, {
+            opacity: 0,
+            y: 50,
+            duration: 0.5,
+            scrollTrigger: {
+              trigger: card,
+              start: 'top 80%',
+              toggleActions: 'play none play reverse', // Play the animation on scroll
+            },
+          });
+        });
       };
 
-      const filterByCountry = () => {
+      function filterByCountry() {
         const searchValue = $(this).val().toLowerCase();
 
         const filterInput = data?.filter((item) =>
@@ -53,9 +66,9 @@ $(document).ready(function () {
         } else {
           renderCountryCards(filterInput);
         }
-      };
+      }
 
-      const filterByRegion = () => {
+      function filterByRegion() {
         const optionValue = $(this).val();
 
         const filterOption = data?.filter((item) =>
@@ -63,7 +76,7 @@ $(document).ready(function () {
         );
 
         renderCountryCards(filterOption);
-      };
+      }
 
       renderCountryCards(data);
 
@@ -73,4 +86,8 @@ $(document).ready(function () {
     .catch((error) => {
       console.error('Error fetching data:', error);
     });
+
+  $('#form').on('submit', function (e) {
+    e.preventDefault();
+  });
 });
