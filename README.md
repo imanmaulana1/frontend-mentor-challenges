@@ -20,6 +20,8 @@ Here are some of the challenges included in this repository:
 ### Difficulty
 - [Newbie](https://github.com/imanmaulana1/frontend-mentor-challenges/tree/main/newbie)
 - [Junior](https://github.com/imanmaulana1/frontend-mentor-challenges/tree/main/junior)
+- [Intermediate](https://github.com/imanmaulana1/frontend-mentor-challenges/tree/main/intermediate)
+- [Advanced](https://github.com/imanmaulana1/frontend-mentor-challenges/tree/main/advanced)
 
 Each challenge is contained in its own folder and includes all the necessary files to run and view the project.
 
