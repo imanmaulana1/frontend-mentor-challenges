@@ -20,7 +20,7 @@
 }
 
 .fa-magnifying-glass {
-  color: var(--input-placeholder);
+  color: var(--input);
 }
 
 input[name='search'] {

@@ -4,6 +4,10 @@
   width: 136px;
 }
 
+.fa-arrow-left {
+  color: var(--text);
+}
+
 .wrapper {
   padding: 9px 40px;
   display: flex;
@@ -45,8 +49,8 @@
   }
 }
 
-
 .country-name {
+  color: var(--text);
   font-size: 28px;
   font-style: normal;
   font-weight: 700;
@@ -119,11 +123,12 @@
   transition: all 0.3s ease;
 
   &:hover {
-    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
 }
 
 .country-borders ul .list a {
+  color: var(--text);
   display: block;
   width: 100%;
 }
@@ -187,6 +192,7 @@
 
   .country-borders ul .list a {
     padding-inline: 20px;
+    color: var(--text);
   }
 }
 

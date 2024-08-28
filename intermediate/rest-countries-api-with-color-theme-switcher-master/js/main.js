@@ -63,7 +63,7 @@ $(document).ready(function () {
         );
 
         if (!filterInput.length >= 1) {
-          $('.countries-wrapper').html('<p>No matching results found.</p>');
+          $('.countries-wrapper').html('<p class="error">No matching results found.</p>');
         } else {
           renderCountryCards(filterInput);
         }

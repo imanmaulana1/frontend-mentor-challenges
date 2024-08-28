@@ -3,6 +3,7 @@
   --element: hsl(0, 0%, 100%);
   --text: hsl(200, 15%, 8%);
   --input: hsl(0, 0%, 52%);
+  --darkmode-active: hsl(0, 0%, 100%);
 
   --ff-nunito: 'Nunito Sans', sans-serif;
 }
@@ -37,6 +38,7 @@ li {
 
 input,
 select {
+  background-color: transparent;
   border: none;
   outline: none;
   padding-block: 22px;
@@ -62,6 +64,10 @@ img {
 .container {
   width: 100%;
   padding-inline: 20px;
+}
+
+.error{
+  color: var(--text);
 }
 
 /* -------------------------------------------------------------------------- */
@@ -102,6 +108,10 @@ img {
 
 .nav-darkmode i {
   font-size: 20px;
+}
+
+.nav-darkmode .fa-solid.fa-moon {
+  color: var(--darkmode-active);
 }
 
 .nav-darkmode span {
