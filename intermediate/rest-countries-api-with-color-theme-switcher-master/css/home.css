@@ -1,49 +1,6 @@
-.container {
-  width: 100%;
-  padding-inline: 20px;
-}
-
-.main-header {
-  height: 100px;
-  display: flex;
-  align-items: center;
-  background-color: var(--element);
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
-    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-}
-
-.main-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.nav-brand {
-  color: var(--text);
-  font-size: 1.0625rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: 0.17px;
-}
-
-.nav-darkmode {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.nav-darkmode i {
-  font-size: 20px;
-}
-
-.nav-darkmode span {
-  color: var(--text);
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
+/* -------------------------------------------------------------------------- */
+/*                         Styling for Filter Section                         */
+/* -------------------------------------------------------------------------- */
 
 .filter .container {
   margin-top: 30px;
@@ -94,7 +51,12 @@ select[name='region'] {
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.3px;
+  cursor: pointer;
 }
+
+/* -------------------------------------------------------------------------- */
+/*                         Styling for List of Country                        */
+/* -------------------------------------------------------------------------- */
 
 .countries-wrapper {
   margin-block: 40px 80px;
@@ -112,6 +74,13 @@ select[name='region'] {
   border-radius: 6px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   overflow: hidden;
+  transition: box-shadow 0.4s ease;
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+      rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+      rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  }
 }
 
 .card-header {
@@ -174,6 +143,10 @@ select[name='region'] {
   letter-spacing: 0.16px;
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                 Breakpoint                                 */
+/* -------------------------------------------------------------------------- */
+
 @media screen and (min-width: 768px) {
   .nav-brand {
     font-size: 1.4375rem;
@@ -212,16 +185,10 @@ select[name='region'] {
 }
 
 @media screen and (min-width: 1024px) {
-  .container {
-    max-width: 970px;
-    margin-inline: auto;
-    padding-inline: 0;
-  }
-
   .countries-wrapper {
     margin-block: 45px;
     grid-template-columns: repeat(3, 264px);
-    gap: 75px;
+    gap: 48px;
   }
 
   .card-header {
@@ -261,17 +228,14 @@ select[name='region'] {
 }
 
 @media screen and (min-width: 1280px) {
-  .container {
-    max-width: 1200px;
-  }
-
   .countries-wrapper {
     grid-template-columns: repeat(4, 264px);
   }
 }
 
 @media screen and (min-width: 1366px) {
-  .container {
-    max-width: 1280px;
+  .countries-wrapper {
+    grid-template-columns: repeat(4, 264px);
+    gap: 75px;
   }
 }

@@ -10,7 +10,7 @@ $(document).ready(function () {
       const renderCountryCards = (data) => {
         const cards = data?.map(
           (item) => `
-              <a href="#">
+              <a href="./detail.html?id=${item.alpha3Code.toLowerCase()}">
                 <article class="card">
                   <header class="card-header">
                     <img src="${item.flags.svg}" alt="Flag of ${item.name}" />
@@ -40,6 +40,8 @@ $(document).ready(function () {
 
         $('.countries-wrapper').html(cardHTML);
 
+        if (gsap.utils.toArray('.card').length < 9) return;
+
         gsap.utils.toArray('.card').forEach((card) => {
           gsap.from(card, {
             opacity: 0,
@@ -48,7 +50,6 @@ $(document).ready(function () {
             scrollTrigger: {
               trigger: card,
               start: 'top 80%',
-              toggleActions: 'play none play reverse', // Play the animation on scroll
             },
           });
         });
