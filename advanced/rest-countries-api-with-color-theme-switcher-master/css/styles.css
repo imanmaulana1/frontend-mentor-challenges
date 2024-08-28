@@ -147,6 +147,10 @@ img {
     margin-inline: auto;
     padding-inline: 0;
   }
+
+  .main-header {
+    height: 80px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
