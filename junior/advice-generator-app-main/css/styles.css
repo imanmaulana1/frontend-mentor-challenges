@@ -1,0 +1,131 @@
+:root {
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Manrope', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--dark-blue);
+  display: grid;
+  place-items: center;
+}
+
+main {
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  padding-inline: 16px;
+}
+
+.advice-card {
+  max-width: 539px;
+  width: 100%;
+  margin-inline: auto;
+  padding: 40px 24px;
+  background-color: var(--dark-grayish-blue);
+  border-radius: 10px;
+  position: relative;
+}
+
+.advice-quote {
+  color: var(--light-cyan);
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: -0.24px;
+  margin-bottom: 24px;
+}
+
+.advice-title {
+  color: var(--neon-green);
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 3.63px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.divider {
+  display: grid;
+  grid-template-columns: 1fr 20px 1fr;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.dots-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 6px;
+  height: 16px;
+  background-color: var(--light-cyan);
+  border-radius: 2px;
+}
+
+.advice-generate {
+  width: 64px;
+  height: 64px;
+  background-color: var(--neon-green);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: box-shadow 0.4s ease;
+
+  &:hover {
+    box-shadow: 0px 0px 20px 0px var(--neon-green);
+  }
+
+  &:active {
+    bottom: -2.1rem;
+  }
+}
+
+.advice-generate:active img {
+  transform: rotate(45deg);
+}
+
+@media screen and (min-width: 768px) {
+  .advice-card {
+    padding: 48px 42px;
+  }
+
+  .advice-quote {
+    font-size: 28px;
+    letter-spacing: -0.28px;
+    margin-bottom: 40px;
+  }
+
+  .advice-title {
+    font-size: 13px;
+    letter-spacing: 4.29px;
+  }
+
+  .divider {
+    margin-bottom: 30px;
+  }
+}
